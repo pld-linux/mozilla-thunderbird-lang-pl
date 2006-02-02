@@ -11,7 +11,7 @@ Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl-PL.xpi
 # Source0-md5:	9cee1e84c9fc9100e47e4c4fbf63003e
 Source1:	%{name}-installed-chrome.txt
-URL:		http://www.firefox.pl/
+URL:		http://www.thunderbird.pl/
 BuildRequires:	unzip
 Requires(post,postun):	mozilla-thunderbird >= %{version}
 Requires(post,postun):	textutils
