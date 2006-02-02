@@ -1,0 +1,12 @@
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/communicator/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/editor/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/global/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/global-platform/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/global-region/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/messenger/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/mozapps/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/mozldap/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/navigator/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/necko/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/pipnss/
+locale,install,url,jar:resource:/chrome/pl-PL-mail.jar!/locale/pippki/
