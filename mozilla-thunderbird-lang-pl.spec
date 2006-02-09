@@ -5,7 +5,7 @@ Summary:	Polish resources for Mozilla-thunderbird
 Summary(pl):	Polskie pliki jêzykowe dla Mozilli-thunderbird
 Name:		mozilla-thunderbird-lang-pl
 Version:	1.5
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl.xpi
@@ -35,10 +35,10 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_chromedir},%{_thunderbirddir}/{defaults/profile,searchplugins}}
 
 unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_libdir}
-mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/pl*.jar $RPM_BUILD_ROOT%{_chromedir}
+mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/pl.jar $RPM_BUILD_ROOT%{_chromedir}
 mv -f $RPM_BUILD_ROOT%{_libdir}/*.rdf $RPM_BUILD_ROOT%{_thunderbirddir}/defaults/profile
 mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/chrome* $RPM_BUILD_ROOT%{_chromedir}
-mv -f $RPM_BUILD_ROOT%{_libdir}/chrome.manifest $RPM_BUILD_ROOT%{_chromedir}
+mv -f $RPM_BUILD_ROOT%{_libdir}/chrome.manifest $RPM_BUILD_ROOT%{_chromedir}/pl.manifest
 
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
@@ -48,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 umask 022
-cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+cat %{_thunderbirddir}/chrome/*-installed-chrome.txt >%{_thunderbirddir}/chrome/installed-chrome.txt
 
 %postun
 umask 022
@@ -59,5 +59,8 @@ cat %{_thunderbirddir}/chrome/*-installed-chrome.txt >%{_thunderbirddir}/chrome/
 %{_chromedir}/pl.jar
 #%{_chromedir}/pl-PL-mail.jar
 %{_chromedir}/%{name}-installed-chrome.txt
+%{_chromedir}/pl.manifest
+%{_chromedir}/chromelist.txt
 %{_thunderbirddir}/defaults/profile/*.rdf
+
 #   /usr/lib/#   /usr/lib/chrome/
