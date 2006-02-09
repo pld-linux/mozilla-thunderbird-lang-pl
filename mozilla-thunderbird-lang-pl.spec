@@ -1,5 +1,5 @@
 # TODO:
-#  - do something with *.rdf file, there if file conflict with other lang packages
+#  - do something with *.rdf file, there is file conflict with other lang packages
 #
 Summary:	Polish resources for Mozilla-thunderbird
 Summary(pl):	Polskie pliki jêzykowe dla Mozilli-thunderbird
@@ -40,25 +40,13 @@ mv -f $RPM_BUILD_ROOT%{_libdir}/*.rdf $RPM_BUILD_ROOT%{_thunderbirddir}/defaults
 mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/chrome* $RPM_BUILD_ROOT%{_chromedir}
 mv -f $RPM_BUILD_ROOT%{_libdir}/chrome.manifest $RPM_BUILD_ROOT%{_chromedir}/pl.manifest
 
-
-install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post
-umask 022
-cat %{_thunderbirddir}/chrome/*-installed-chrome.txt >%{_thunderbirddir}/chrome/installed-chrome.txt
-
-%postun
-umask 022
-cat %{_thunderbirddir}/chrome/*-installed-chrome.txt >%{_thunderbirddir}/chrome/installed-chrome.txt
 
 %files
 %defattr(644,root,root,755)
 %{_chromedir}/pl.jar
 #%{_chromedir}/pl-PL-mail.jar
-%{_chromedir}/%{name}-installed-chrome.txt
 %{_chromedir}/pl.manifest
 %{_chromedir}/chromelist.txt
 %{_thunderbirddir}/defaults/profile/*.rdf
