@@ -5,12 +5,11 @@ Summary:	Polish resources for Mozilla-thunderbird
 Summary(pl):	Polskie pliki jêzykowe dla Mozilli-thunderbird
 Name:		mozilla-thunderbird-lang-pl
 Version:	1.5
-Release:	0.3
+Release:	0.4
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl.xpi
-# Source0-md5:	ddffac7d447d7b917eee4fd61f20ff8a
-Source1:	%{name}-installed-chrome.txt
+# Source0-md5:	0c6dd101362b57a34ec64c955590fe3b
 URL:		http://www.thunderbird.pl/
 BuildRequires:	unzip
 Requires(post,postun):	mozilla-thunderbird >= %{version}
@@ -46,7 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{_chromedir}/pl.jar
-#%{_chromedir}/pl-PL-mail.jar
 %{_chromedir}/pl.manifest
 %{_chromedir}/chromelist.txt
 %{_thunderbirddir}/defaults/profile/*.rdf
