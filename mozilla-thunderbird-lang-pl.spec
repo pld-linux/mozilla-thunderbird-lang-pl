@@ -5,7 +5,7 @@ Summary:	Polish resources for Mozilla-thunderbird
 Summary(pl):	Polskie pliki jêzykowe dla Mozilli-thunderbird
 Name:		mozilla-thunderbird-lang-pl
 Version:	1.5.0.4
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl.xpi
