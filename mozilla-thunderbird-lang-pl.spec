@@ -2,7 +2,7 @@
 #  - do something with *.rdf file, there is file conflict with other lang packages
 #
 Summary:	Polish resources for Mozilla-thunderbird
-Summary(pl):	Polskie pliki jêzykowe dla Mozilli-thunderbird
+Summary(pl.UTF-8):   Polskie pliki jÄ™zykowe dla Mozilli-thunderbird
 Name:		mozilla-thunderbird-lang-pl
 Version:	1.5.0.8
 Release:	0.1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Polish resources for Mozilla-thunderbird.
 
-%description -l pl
-Polskie pliki jêzykowe dla Mozilli-thunderbird.
+%description -l pl.UTF-8
+Polskie pliki jÄ™zykowe dla Mozilli-thunderbird.
 
 %prep
 
