@@ -14,6 +14,7 @@ URL:		http://www.thunderbird.pl/
 BuildRequires:	unzip
 Requires:	mozilla-thunderbird >= %{version}
 Provides:	mozilla-thunderbird-lang-resources = %{version}
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_thunderbirddir	%{_datadir}/mozilla-thunderbird
