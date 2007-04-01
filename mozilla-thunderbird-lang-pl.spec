@@ -5,7 +5,7 @@ Summary:	Polish resources for Mozilla-thunderbird
 Summary(pl):	Polskie pliki jêzykowe dla Mozilli-thunderbird
 Name:		mozilla-thunderbird-lang-pl
 Version:	2.0
-Release:	0.b2.1
+Release:	0.b2.2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}b2/linux-i686/xpi/pl.xpi
@@ -14,6 +14,7 @@ URL:		http://www.thunderbird.pl/
 BuildRequires:	unzip
 Requires:	mozilla-thunderbird >= %{version}
 Provides:	mozilla-thunderbird-lang-resources = %{version}
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_thunderbirddir	%{_datadir}/mozilla-thunderbird
