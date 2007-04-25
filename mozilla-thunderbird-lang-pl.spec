@@ -5,7 +5,7 @@ Summary:	Polish resources for Mozilla-thunderbird
 Summary(pl.UTF-8):	Polskie pliki językowe dla Mozilli-thunderbird
 Name:		mozilla-thunderbird-lang-pl
 Version:	2.0.0.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl.xpi
@@ -36,7 +36,8 @@ unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_libdir}
 mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/pl.jar $RPM_BUILD_ROOT%{_chromedir}/pl-PL.jar
 mv -f $RPM_BUILD_ROOT%{_libdir}/*.rdf $RPM_BUILD_ROOT%{_thunderbirddir}/defaults/profile
 mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/* $RPM_BUILD_ROOT%{_chromedir}
-mv -f $RPM_BUILD_ROOT%{_libdir}/chrome.manifest $RPM_BUILD_ROOT%{_chromedir}/pl-PL.manifest
+cat $RPM_BUILD_ROOT%{_libdir}/chrome.manifest | sed 's: pl : pl-PL :g; s:chrome/pl:pl-PL:g ' \
+	> $RPM_BUILD_ROOT%{_chromedir}/pl-PL.manifest
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,5 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_chromedir}/pl-PL.jar
 %{_chromedir}/pl-PL.manifest
-%{_chromedir}/chromelist.txt
+#%{_chromedir}/chromelist.txt
 %{_thunderbirddir}/defaults/profile/*.rdf
