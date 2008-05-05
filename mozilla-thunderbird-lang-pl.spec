@@ -9,7 +9,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl.xpi
-# Source0-md5:	dd99e73370921fe8d9546fdc54223f1c
+# Source0-md5:	9e8f7ee13949ea2e50bda06646632950
 URL:		http://www.thunderbird.pl/
 BuildRequires:	unzip
 Requires:	mozilla-thunderbird >= %{version}
