@@ -7,7 +7,7 @@ Name:		mozilla-thunderbird-lang-pl
 Version:	2.0.0.14
 Release:	1
 License:	GPL
-Group:		X11/Applications/Networking
+Group:		I18n
 Source0:	http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/%{version}/linux-i686/xpi/pl.xpi
 # Source0-md5:	9e8f7ee13949ea2e50bda06646632950
 URL:		http://www.thunderbird.pl/
